@@ -1,35 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
-  <link rel="stylesheet" href="css/login.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — ArtGallery</title>
+  <style>
+    /* ===== Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --primary-color: #00bcd4;
+      --primary-hover: #0097a7;
+      --text-light: #fff;
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --transition: 0.3s ease;
+    }
+
+    /* ===== Body ===== */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("images/background.jpg") no-repeat center center/cover;
+    }
+
+    /* ===== Container ===== */
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    /* ===== Card ===== */
+    .login-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    /* ===== Header ===== */
+    .login-header .login-logo {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .login-header h1 {
+      color: var(--text-light);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    /* ===== Form Groups ===== */
+    .login-form .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 12px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--text-light);
+      color: var(--text-light);
+      font-size: 16px;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .login-form label {
+      position: absolute;
+      left: 0;
+      top: 12px;
+      color: var(--text-light);
+      font-size: 14px;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .login-form input:focus,
+    .login-form input:valid {
+      border-color: var(--primary-color);
+    }
+
+    .login-form input:focus + label,
+    .login-form input:valid + label {
+      top: -14px;
+      font-size: 12px;
+      color: var(--primary-color);
+    }
+
+    /* ===== Button ===== */
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      background: var(--primary-color);
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    /* ===== Links ===== */
+    .login-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .login-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .login-links a:hover {
+      color: var(--primary-color);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 480px) {
+      .login-card {
+        padding: 30px 20px;
+      }
+
+      .login-header h1 {
+        font-size: 20px;
+      }
+
+      .btn-primary {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="auth-container">
-    <section class="auth-card">
-      <div class="auth-header">
-        <img src="images/logo.png" alt="App Logo" class="auth-logo" />
-        <h1 class="auth-title">Welcome Back</h1>
+  <main class="login-container">
+    <section class="login-card">
+      <div class="login-header">
+        <img src="images/logo.png" alt="ArtGallery Logo" class="login-logo">
+        <h1>Welcome Back</h1>
       </div>
 
-      <form class="auth-form" action="#" method="POST">
+      <form class="login-form" action="#" method="POST">
         <div class="form-group">
-          <input type="text" id="username" name="username" required />
-          <label for="username">Username</label>
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
         </div>
 
         <div class="form-group">
-          <input type="password" id="password" name="password" required />
+          <input type="password" id="password" name="password" required>
           <label for="password">Password</label>
         </div>
 
         <button type="submit" class="btn-primary">Login</button>
 
-        <div class="auth-links">
+        <div class="login-links">
           <a href="#">Forgot Password?</a>
-          <a href="#">Create Account</a>
+          <a href="signup.html">Sign Up</a>
         </div>
       </form>
     </section>
