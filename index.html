@@ -3,90 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Art Gallery — Home</title>
+  <title>Starry Evening — ArtGallery</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.html">ArtGallery</a>
+      <a class="navbar-brand" href="../index.html">ArtGallery</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" 
               aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="art-list.html">Gallery List</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="../signup.html">Sign Up</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="text-center py-5 bg-light">
-    <div class="container">
-      <h1 class="display-4 mb-3">Welcome to ArtGallery</h1>
-      <p class="lead mb-4">Explore the finest artworks from talented artists around the world.</p>
-      <a href="art-list.html" class="btn btn-primary btn-lg">Explore Gallery</a>
+  <!-- Art Details -->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../images/art1.jpg" class="img-fluid shadow-sm mb-4" alt="Starry Evening">
+      </div>
+      <div class="col-md-6">
+        <h1>Starry Evening</h1>
+        <p class="text-muted">by A. Painter, 1889</p>
+        <p>This masterpiece depicts swirling night skies over a quiet village. The dynamic brush strokes and vibrant colors capture deep emotion and the essence of imagination.</p>
+      </div>
     </div>
-  </section>
 
-  <!-- Featured Artworks -->
-  <main class="container py-5">
-    <h2 class="mb-4">Featured Artworks</h2>
+    <!-- Similar Artworks -->
+    <h3 class="mt-5 mb-3">Similar Artworks</h3>
     <div class="row g-4">
-
-      <!-- Art 1 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <a href="artworks/art1.html" class="text-decoration-none">
-          <div class="card gallery-card h-100 shadow-sm">
-            <img src="https://raw.githubusercontent.com/abintom2006-lgtm/ASSIGNMENT-1-.github.io/5fa4b2cd518657c39b5725d0dc9ceb7774f00ecd/Screenshot%202025-10-18%20214256.png"
-                 alt="Starry Evening" class="card-img-top" loading="lazy"
-                 onerror="this.onerror=null;this.src='images/fallback.png';">
+      <div class="col-6 col-md-4">
+        <a href="art2.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/art2.jpg" class="card-img-top" alt="Quiet Fields">
             <div class="card-body">
-              <h5 class="card-title">Starry Evening</h5>
-              <p class="card-text">by A. Painter</p>
+              <h6 class="card-title">Quiet Fields</h6>
             </div>
           </div>
         </a>
       </div>
-
-      <!-- Art 2 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <a href="artworks/art2.html" class="text-decoration-none">
-          <div class="card gallery-card h-100 shadow-sm">
-            <img src="images/art2.jpg" alt="Quiet Fields" class="card-img-top" loading="lazy"
-                 onerror="this.onerror=null;this.src='images/fallback.png';">
+      <div class="col-6 col-md-4">
+        <a href="art3.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/art3.jpg" class="card-img-top" alt="Abstract Lines">
             <div class="card-body">
-              <h5 class="card-title">Quiet Fields</h5>
-              <p class="card-text">by B. Artist</p>
+              <h6 class="card-title">Abstract Lines</h6>
             </div>
           </div>
         </a>
       </div>
-
-      <!-- Art 3 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <a href="artworks/art3.html" class="text-decoration-none">
-          <div class="card gallery-card h-100 shadow-sm">
-            <img src="images/art3.jpg" alt="Abstract Lines" class="card-img-top" loading="lazy"
-                 onerror="this.onerror=null;this.src='images/fallback.png';">
+      <div class="col-6 col-md-4">
+        <a href="art4.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm">
+            <img src="../images/art4.jpg" class="card-img-top" alt="Sunset Glow">
             <div class="card-body">
-              <h5 class="card-title">Abstract Lines</h5>
-              <p class="card-text">by C. Creator</p>
+              <h6 class="card-title">Sunset Glow</h6>
             </div>
           </div>
         </a>
       </div>
-
     </div>
-  </main>
+  </div>
 
+  <!-- Footer -->
   <footer class="text-center py-4 bg-light">
     <div class="container">© 2025 ArtGallery — sample project</div>
   </footer>
