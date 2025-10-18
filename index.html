@@ -1,5 +1,4 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,7 +11,8 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">ArtGallery</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" 
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
@@ -30,9 +30,9 @@
     <div class="row g-4">
       <!-- Repeat card for each artwork -->
       <div class="col-12 col-sm-6 col-md-4">
-        <a href="artworks/art1.html" class="card-link">
+        <a href="artworks/art1.html" class="card-link text-decoration-none">
           <div class="card gallery-card h-100 shadow-sm">
-            <img src="images/art1.jpg" class="card-img-top" alt="Art 1">
+            <img src="images/art1.jpg" class="card-img-top" alt="Starry Evening">
             <div class="card-body">
               <h5 class="card-title">Starry Evening</h5>
               <p class="card-text">by A. Painter</p>
@@ -42,9 +42,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4">
-        <a href="artworks/art2.html" class="card-link">
+        <a href="artworks/art2.html" class="card-link text-decoration-none">
           <div class="card gallery-card h-100 shadow-sm">
-            <img src="images/art2.jpg" class="card-img-top" alt="Art 2">
+            <img src="images/art2.jpg" class="card-img-top" alt="Quiet Fields">
             <div class="card-body">
               <h5 class="card-title">Quiet Fields</h5>
               <p class="card-text">by B. Artist</p>
@@ -54,9 +54,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4">
-        <a href="artworks/art3.html" class="card-link">
+        <a href="artworks/art3.html" class="card-link text-decoration-none">
           <div class="card gallery-card h-100 shadow-sm">
-            <img src="images/art3.jpg" class="card-img-top" alt="Art 3">
+            <img src="images/art3.jpg" class="card-img-top" alt="Abstract Lines">
             <div class="card-body">
               <h5 class="card-title">Abstract Lines</h5>
               <p class="card-text">by C. Creator</p>
@@ -64,7 +64,6 @@
           </div>
         </a>
       </div>
-
     </div>
   </main>
 
@@ -76,6 +75,3 @@
   <script src="js/scripts.js"></script>
 </body>
 </html>
-```
-
----
